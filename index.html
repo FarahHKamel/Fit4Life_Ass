@@ -1,0 +1,222 @@
+<html>
+
+<head>
+    <title>Fit4Life</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrap">
+            <div class="flex">
+                <img src="assets/fit.png" alt="">
+                <h1>Fit4Life</h1>
+            </div>
+            <nav>
+                <a href="#new">New Client</a>
+                <a href="#list">Client List</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <!-- Page 1: New Client Form -->
+        <section id="new" class="card">
+            <h2>New Client</h2>
+
+            <form class="grid" onsubmit="return false">
+                <label>
+                    Full Name
+                    <input type="text" placeholder="Mohamed Ahmed" required>
+                </label>
+
+                <label>
+                    Age
+                    <input type="number" min="0" max="120" placeholder="32">
+                </label>
+
+                <label>
+                    Gender
+                    <select>
+                        <option selected disabled>Select…</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" placeholder="name@example.com">
+                </label>
+
+                <label>
+                    Phone
+                    <input type="tel" placeholder="010 123 45678">
+                </label>
+
+                <label>
+                    Fitness Goal
+                    <select>
+                        <option selected disabled>Select…</option>
+                        <option>Weight Loss</option>
+                        <option>Muscle Gain</option>
+                        <option>General Fitness</option>
+                        <option>Endurance</option>
+                        <option>Mobility</option>
+                    </select>
+                </label>
+
+                <label>
+                    Membership Start Date
+                    <input type="date">
+                </label>
+
+                <div class="actions">
+                    <button type="button" class="btn">Add Client</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Page 2: Client List View -->
+        <section id="list" class="card">
+            <h2>Clients</h2>
+
+            <input type="search" class="search" placeholder="Search by name">
+
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Fitness Goal</th>
+                            <th>Start Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mohamed Ahmed</td>
+                            <td>m.ahmed@example.com</td>
+                            <td>010 1010 0001</td>
+                            <td>Weight Loss</td>
+                            <td>2025-01-10</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sara Hussein</td>
+                            <td>s.hussein@example.com</td>
+                            <td>011 1010 0002</td>
+                            <td>Muscle Gain</td>
+                            <td>2025-02-02</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fatma Ali</td>
+                            <td>f.ali@example.com</td>
+                            <td>012 1010 0003</td>
+                            <td>General Fitness</td>
+                            <td>2025-03-15</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Omar Samir</td>
+                            <td>omar.samir@example.com</td>
+                            <td>010 1010 0004</td>
+                            <td>Endurance</td>
+                            <td>2025-04-01</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mariam Khaled</td>
+                            <td>m.khaled@example.com</td>
+                            <td>011 1010 0005</td>
+                            <td>Mobility</td>
+                            <td>2025-05-20</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yasser Mahmoud</td>
+                            <td>y.mahmoud@example.com</td>
+                            <td>012 1010 0006</td>
+                            <td>Weight Loss</td>
+                            <td>2025-06-12</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nour Mohamed</td>
+                            <td>n.mohamed@example.com</td>
+                            <td>015 1010 0007</td>
+                            <td>General Fitness</td>
+                            <td>2025-07-01</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Laila Sameh</td>
+                            <td>l.sameh@example.com</td>
+                            <td>010 1010 0008</td>
+                            <td>Muscle Gain</td>
+                            <td>2025-08-18</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Khaled Adel</td>
+                            <td>k.adel@example.com</td>
+                            <td>011 1010 0009</td>
+                            <td>Endurance</td>
+                            <td>2025-09-05</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hoda Hussein</td>
+                            <td>h.hussein@example.com</td>
+                            <td>012 1010 0010</td>
+                            <td>Mobility</td>
+                            <td>2025-10-01</td>
+                            <td>
+                                <button class="link">Edit</button>
+                                <button class="link">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap-foot">
+            <h3>Fit4Life</h3>
+        </div>
+    </footer>
+</body>
+
+</html>
