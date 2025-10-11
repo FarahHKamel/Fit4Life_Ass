@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fafafa;
+}
+.wrap { width: 92%; max-width: 960px; margin: 0 auto; }
+
+img {
+    width: 5%;       /* make it stretch to parent width */
+    height: auto;      /* keep proportions */
+    max-width: 400px;  /* optional: limit size */
+  }
+/* header */
+.header { background: #84eb92; border-bottom: 2px solid #000000; }
+.header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+.header .flex { display: flex; flex-direction: row;}
+.header a { margin-left: 10px; text-decoration: none; color: #333; }
+.header a:hover { text-decoration: underline; color: red;}
+
+/* footer */
+.footer { background: #84eb92; border-top: 1px solid #000000; }
+.footer .wrap-foot {display: flex; align-items: start;}
+
+/* cards */
+.card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; margin: 18px 0; }
+
+/* form */
+.grid { display: grid; gap: 10px; grid-template-columns: 1fr;}
+label { display: flex; flex-direction: column; font-weight: 600; }
+input, select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+input:focus, select:focus { outline: 2px solid #bfe1ff; border-color: #87c6ff; }
+.actions { margin-top: 6px; }
+.btn { padding: 8px 12px; border: 1px solid #0a7a4b; background: #0a7a4b; color: #fff; border-radius: 4px; cursor: pointer; }
+.btn:hover { filter: brightness(1.05); }
+
+/* list */
+.search { width: 100%; max-width: 420px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
+.table-box { overflow-x: auto; }
+.table-box table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.table-box th, .table-box td { padding: 10px; border-bottom: 1px solid #eee; text-align: left; }
+.table-box thead th { background: #f2f2f2; }
+button.link { background: none; border: none; color: #0a5ea8; cursor: pointer; padding: 0; margin-right: 8px; }
+button.link:hover { text-decoration: underline; color: #0a7a4b;}
+
+/* simple responsive */
+@media (min-width: 700px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .actions { grid-column: 1 / -1; }
+}
