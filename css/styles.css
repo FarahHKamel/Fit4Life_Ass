@@ -8,7 +8,7 @@ body {
 .wrap { width: 92%; max-width: 960px; margin: 0 auto; }
 
 img {
-    width: 10%;       /* make it stretch to parent width */
+    width: 20%;       /* make it stretch to parent width */
     height: auto;      /* keep proportions */
     max-width: 400px;  /* optional: limit size */
   }
