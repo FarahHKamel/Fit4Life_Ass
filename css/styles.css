@@ -33,7 +33,7 @@ input, select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
 input:focus, select:focus { outline: 2px solid #bfe1ff; border-color: #87c6ff; }
 .actions { margin-top: 6px; }
 .btn { padding: 8px 12px; border: 1px solid #0a7a4b; background: #0a7a4b; color: #fff; border-radius: 4px; cursor: pointer; }
-.btn:hover { filter: brightness(1.05); }
+.btn:hover { filter: brightness(1.05);color: #0a7a8b; }
 
 /* list */
 .search { width: 100%; max-width: 420px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
