@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fit4Life - Client Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrap">
+            <div class="flex">
+                <img src="assets/fit.png" alt="">
+                <h1>Fit4Life</h1>
+            </div>
+            <nav>
+                <a href="index.html#list">Back to Client List</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <!-- Client basic info -->
+        <section class="card">
+            <h2>Client Details</h2>
+
+            <div class="grid">
+                <div>
+                    <strong>Name</strong>
+                    <p id="clientName"></p>
+                </div>
+
+                <div>
+                    <strong>Email</strong>
+                    <p id="clientEmail"></p>
+                </div>
+
+                <div>
+                    <strong>Phone</strong>
+                    <p id="clientPhone"></p>
+                </div>
+
+                <div>
+                    <strong>Fitness Goal</strong>
+                    <p id="clientGoal"></p>
+                </div>
+
+                <div>
+                    <strong>Membership Start Date</strong>
+                    <p id="clientStartDate"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training history -->
+        <section class="card">
+            <h2>Training History</h2>
+            <ul id="trainingHistory"></ul>
+        </section>
+
+        <!-- Exercises for next session -->
+        <section class="card">
+            <h2>Exercises for Next Session</h2>
+            <p id="exerciseStatus" style="margin-bottom:8px; font-size:0.9rem; color:#555;"></p>
+            <ul id="nextExercises"></ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="wrap-foot">
+            <h3>Fit4Life</h3>
+        </div>
+    </footer>
+
+    <script src="js/client.js"></script>
+</body>
+
+</html>

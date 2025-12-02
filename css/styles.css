@@ -8,9 +8,9 @@ body {
 .wrap { width: 92%; max-width: 960px; margin: 0 auto; }
 
 img {
-    width: 25%;       
-    height: auto;      
-    max-width: 400px; 
+    width: 25%;
+    height: auto;
+    max-width: 400px;
   }
 /* header */
 .header { background: #84eb92; border-bottom: 2px solid #000000; }
@@ -31,6 +31,14 @@ img {
 label { display: flex; flex-direction: column; font-weight: 600; }
 input, select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
 input:focus, select:focus { outline: 2px solid #bfe1ff; border-color: #87c6ff; }
+
+/* error styles for validation */
+input.error,
+select.error {
+  border-color: #e53935;
+  outline: 2px solid #ffcdd2;
+}
+
 .actions { margin-top: 6px; }
 .btn { padding: 8px 12px; border: 1px solid #0a7a4b; background: #0a7a4b; color: #fff; border-radius: 4px; cursor: pointer; }
 .btn:hover { filter: brightness(1.05);color: #84eb92; }

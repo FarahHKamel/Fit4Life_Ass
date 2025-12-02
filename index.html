@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -20,59 +21,65 @@
     </header>
 
     <main class="wrap">
+
         <!-- Page 1: New Client Form -->
         <section id="new" class="card">
             <h2>New Client</h2>
 
             <form class="grid" onsubmit="return false">
+
+                <!-- Hidden field used for editing -->
+                <input type="hidden" id="editingIndex">
+
                 <label>
                     Full Name
-                    <input type="text" placeholder="Mohamed Ahmed" required>
+                    <input id="fullName" type="text" placeholder="Mohamed Ahmed" required>
                 </label>
 
                 <label>
                     Age
-                    <input type="number" min="0" max="120" placeholder="32">
+                    <input id="age" type="number" min="0" max="120" placeholder="32">
                 </label>
 
                 <label>
                     Gender
-                    <select>
-                        <option selected disabled>Select…</option>
-                        <option>Female</option>
-                        <option>Male</option>
+                    <select id="gender" required>
+                        <option value="" selected disabled>Select…</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
                     </select>
                 </label>
 
                 <label>
                     Email
-                    <input type="email" placeholder="name@example.com">
+                    <input id="email" type="email" placeholder="name@example.com" required>
                 </label>
 
                 <label>
                     Phone
-                    <input type="tel" placeholder="010 123 45678">
+                    <input id="phone" type="tel" placeholder="010 123 45678" required>
                 </label>
 
                 <label>
                     Fitness Goal
-                    <select>
-                        <option selected disabled>Select…</option>
-                        <option>Weight Loss</option>
-                        <option>Muscle Gain</option>
-                        <option>General Fitness</option>
-                        <option>Endurance</option>
-                        <option>Mobility</option>
+                    <select id="goal" required>
+                        <option value="" selected disabled>Select…</option>
+                        <option value="Weight Loss">Weight Loss</option>
+                        <option value="Muscle Gain">Muscle Gain</option>
+                        <option value="General Fitness">General Fitness</option>
+                        <option value="Endurance">Endurance</option>
+                        <option value="Mobility">Mobility</option>
                     </select>
                 </label>
 
                 <label>
                     Membership Start Date
-                    <input type="date">
+                    <input id="startDate" type="date" required>
                 </label>
 
                 <div class="actions">
-                    <button type="button" class="btn">Add Client</button>
+                    <button type="button" class="btn" id="addClientBtn">Add Client</button>
+                    <button type="button" class="btn" id="saveClientBtn" style="display:none;">Save Changes</button>
                 </div>
             </form>
         </section>
@@ -81,7 +88,7 @@
         <section id="list" class="card">
             <h2>Clients</h2>
 
-            <input type="search" class="search" placeholder="Search by name">
+            <input type="search" class="search" placeholder="Search by name" id="searchInput">
 
             <div class="table-box">
                 <table>
@@ -95,118 +102,10 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mohamed Ahmed</td>
-                            <td>m.ahmed@aucegypt.edu</td>
-                            <td>010 1010 0001</td>
-                            <td>Weight Loss</td>
-                            <td>2025-01-10</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sara Hussein</td>
-                            <td>s.hussein@aucegypt.edu</td>
-                            <td>011 1010 0002</td>
-                            <td>Muscle Gain</td>
-                            <td>2025-02-02</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Fatma Ali</td>
-                            <td>f.ali@gmail.com</td>
-                            <td>012 1010 0003</td>
-                            <td>General Fitness</td>
-                            <td>2025-03-15</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Omar Samir</td>
-                            <td>omar.samir@gmail.com</td>
-                            <td>010 1010 0004</td>
-                            <td>Endurance</td>
-                            <td>2025-04-01</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mariam Khaled</td>
-                            <td>m.khaled@hotmail.com</td>
-                            <td>011 1010 0005</td>
-                            <td>Mobility</td>
-                            <td>2025-05-20</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Yasser Mahmoud</td>
-                            <td>y.mahmoud@hotmail.com</td>
-                            <td>012 1010 0006</td>
-                            <td>Weight Loss</td>
-                            <td>2025-06-12</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Nour Mohamed</td>
-                            <td>n.mohamed@gmail.com</td>
-                            <td>015 1010 0007</td>
-                            <td>General Fitness</td>
-                            <td>2025-07-01</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Laila Sameh</td>
-                            <td>l.sameh@aucegypt.edu</td>
-                            <td>010 1010 0008</td>
-                            <td>Muscle Gain</td>
-                            <td>2025-08-18</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Khaled Adel</td>
-                            <td>k.adel@hotmail.com</td>
-                            <td>011 1010 0009</td>
-                            <td>Endurance</td>
-                            <td>2025-09-05</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hoda Hussein</td>
-                            <td>h.hussein@gmail.com</td>
-                            <td>012 1010 0010</td>
-                            <td>Mobility</td>
-                            <td>2025-10-01</td>
-                            <td>
-                                <button class="link">Edit</button>
-                                <button class="link">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
+
+                    <!-- JS will populate rows here -->
+                    <tbody id="clientTableBody"></tbody>
+
                 </table>
             </div>
         </section>
@@ -217,7 +116,8 @@
             <h3>Fit4Life</h3>
         </div>
     </footer>
-</body>
 
+    <script src="js/main.js"></script>
+</body>
 
 </html>
