@@ -97,3 +97,4 @@ Same CSS theme (styles.css)
 │   └── fit.png           # Logo
 └── readme.md
 
+Deployment Method is through github pages
